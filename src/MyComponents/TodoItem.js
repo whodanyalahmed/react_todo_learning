@@ -2,17 +2,19 @@ import React from "react";
 
 export const TodoItem = ({ todo, onDelete }) => {
   return (
-    <div>
+    <div class="my-3 mt-4">
       <h4>{todo.title}</h4>
-      <p>{todo.desc}</p>
+
+      <span>{todo.desc}</span>
       <button
-        className="btn btn-sm btn-danger"
+        className="btn btn-sm btn-danger mx-2"
         onClick={() => {
-          onDelete(todo)
+          onDelete(todo);
         }}
       >
         Delete
       </button>
+      <hr />
     </div>
   );
 };

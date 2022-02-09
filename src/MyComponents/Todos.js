@@ -1,9 +1,12 @@
 import React from "react";
 import { TodoItem } from "./TodoItem";
 export const Todos = (props) => {
+  let myStyle = {
+    minHeight: "7 0vh",
+  };
   return (
-    <div className="container">
-      <h3 className="text-center">Todos List</h3>
+    <div className="container" style={myStyle}>
+      <h3 className="my-3">Todos List</h3>
       {props.todos.length === 0
         ? "No todos in record"
         : props.todos.map((todo) => {
